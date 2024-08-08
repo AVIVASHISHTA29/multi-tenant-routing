@@ -1,3 +1,4 @@
+import { PageConfigInterface } from "@/constants/config";
 import { fetchSubdomainContent } from "@/lib/fetchSubdomainContent";
 import { twMerge } from "tailwind-merge";
 
@@ -7,16 +8,13 @@ export default async function AppsPage({
   searchParams: { subdomain: string };
 }) {
   const subdomain = searchParams.subdomain || "default";
-  const data = await fetchSubdomainContent(subdomain);
+  const data = (await fetchSubdomainContent(subdomain)) as PageConfigInterface;
   const styles = data.styles || {};
-  console.log({ styles });
 
   if (!data) {
     return (
-      <div className="min-h-screen bg-red-100 flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-red-700">
-          Error loading content
-        </h1>
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <h1 className="text-4xl font-bold text-white">Error loading content</h1>
       </div>
     );
   }
@@ -59,13 +57,21 @@ export default async function AppsPage({
         </nav>
       </header>
 
-      <main className="flex-grow flex flex-col items-center text-center p-8">
-        <section className="w-full mb-12">
+      <main
+        className={twMerge(
+          "flex-grow flex flex-col items-center text-center p-8",
+          styles.colorScheme.background
+        )}
+      >
+        <section
+          className={twMerge("w-full mb-12", styles.colorScheme.background)}
+        >
           <div
             className={twMerge(
               "bg-white p-8",
               styles.borderRadius,
-              styles.shadow
+              styles.shadow,
+              styles.colorScheme.background
             )}
           >
             <h1
@@ -125,7 +131,8 @@ export default async function AppsPage({
                 className={twMerge(
                   "bg-white p-8 flex flex-col items-center",
                   styles.borderRadius,
-                  styles.shadow
+                  styles.shadow,
+                  styles.colorScheme.background
                 )}
               >
                 <h2

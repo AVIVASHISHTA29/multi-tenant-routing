@@ -1,4 +1,42 @@
-export const data: Record<string, any> = {
+export interface PageConfigInterface {
+  header: {
+    title: string;
+    navLinks: string[];
+  };
+  heroSection: {
+    title: string;
+    subtitle: string;
+    image: string;
+    cta: {
+      text: string;
+      link: string;
+    }[];
+  };
+  features: {
+    title: string;
+    description: string;
+    image: string;
+  }[];
+  styles: {
+    colorScheme: {
+      background: string;
+      text: string;
+      headerBackground: string;
+      headerText: string;
+      buttonBackground: string;
+      buttonText: string;
+    };
+    fonts: {
+      header: string;
+      body: string;
+      button: string;
+    };
+    borderRadius: string;
+    shadow: string;
+  };
+}
+
+export const data: Record<string, PageConfigInterface> = {
   default: {
     header: {
       title: "Welcome to Our Platform",
@@ -50,7 +88,7 @@ export const data: Record<string, any> = {
         body: "font-sans",
         button: "font-medium",
       },
-      borderRadius: "rounded",
+      borderRadius: "rounded-lg",
       shadow: "shadow-md",
     },
   },
