@@ -95,7 +95,7 @@ export default async function AppsPage({
             <img
               src={data.heroSection.image}
               alt="Hero Image"
-              className="mb-8 w-full max-w-md rounded-lg shadow-md mx-auto"
+              className="mb-8 w-full max-w-md rounded-lg shadow-md mx-auto max-h-52 object-cover"
             />
             <div className="flex flex-wrap justify-center space-x-4">
               {data.heroSection.cta.map(
@@ -156,7 +156,7 @@ export default async function AppsPage({
                 <img
                   src={feature.image}
                   alt={feature.title}
-                  className="w-full max-w-xs rounded-lg shadow-md"
+                  className="w-full max-w-xs rounded-lg shadow-md  max-h-52 object-cover"
                 />
               </div>
             )
