@@ -1,6 +1,8 @@
 // lib/fetchSubdomainContent.js
 export async function fetchSubdomainContent(subdomain: string): Promise<any> {
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+  const baseUrl =
+    process.env.NEXT_PUBLIC_API_URL ??
+    "https://multi-tenant-routing.vercel.app";
   if (!baseUrl) {
     throw new Error(
       "Base URL is not defined. Please set NEXT_PUBLIC_API_URL in your environment variables."

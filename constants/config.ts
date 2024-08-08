@@ -38,12 +38,12 @@ export const data: Record<string, any> = {
     ],
     styles: {
       colorScheme: {
-        background: "bg-white",
-        text: "text-gray-900",
-        headerBackground: "bg-gray-800",
-        headerText: "text-white",
-        buttonBackground: "bg-gray-700",
-        buttonText: "text-white",
+        background: "bg-black",
+        text: "text-white",
+        headerBackground: "bg-white",
+        headerText: "text-black",
+        buttonBackground: "bg-white",
+        buttonText: "text-black",
       },
       fonts: {
         header: "font-serif",
@@ -91,12 +91,12 @@ export const data: Record<string, any> = {
     ],
     styles: {
       colorScheme: {
-        background: "bg-black",
-        text: "text-gray-900",
-        headerBackground: "bg-blue",
-        headerText: "text-white",
-        buttonBackground: "bg-blue",
-        buttonText: "text-white",
+        background: "bg-[#000000]",
+        text: "text-[#1f2937]",
+        headerBackground: "bg-[#0000ff]",
+        headerText: "text-[#ffffff]",
+        buttonBackground: "bg-[#0000ff]",
+        buttonText: "text-[#ffffff]",
       },
       fonts: {
         header: "font-serif",
@@ -143,12 +143,12 @@ export const data: Record<string, any> = {
     ],
     styles: {
       colorScheme: {
-        background: "bg-white",
-        text: "text-gray-800",
-        headerBackground: "bg-green-600",
-        headerText: "text-white",
-        buttonBackground: "bg-green-500",
-        buttonText: "text-white",
+        background: "bg-[#ffffff]",
+        text: "text-[#2d3748]",
+        headerBackground: "bg-[#2f855a]",
+        headerText: "text-[#ffffff]",
+        buttonBackground: "bg-[#38a169]",
+        buttonText: "text-[#ffffff]",
       },
       fonts: {
         header: "font-mono",
@@ -195,12 +195,12 @@ export const data: Record<string, any> = {
     ],
     styles: {
       colorScheme: {
-        background: "bg-white",
-        text: "text-gray-700",
-        headerBackground: "bg-purple-700",
-        headerText: "text-white",
-        buttonBackground: "bg-purple-500",
-        buttonText: "text-white",
+        background: "bg-[#ffffff]",
+        text: "text-[#4a5568]",
+        headerBackground: "bg-[#6b46c1]",
+        headerText: "text-[#ffffff]",
+        buttonBackground: "bg-[#805ad5]",
+        buttonText: "text-[#ffffff]",
       },
       fonts: {
         header: "font-sans",
