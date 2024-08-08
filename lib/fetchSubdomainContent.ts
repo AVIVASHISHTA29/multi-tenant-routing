@@ -1,4 +1,3 @@
-// lib/fetchSubdomainContent.js
 export async function fetchSubdomainContent(subdomain: string): Promise<any> {
   const baseUrl =
     process.env.NEXT_PUBLIC_API_URL ??
