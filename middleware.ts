@@ -3,25 +3,17 @@ import { NextResponse } from "next/server";
 
 export function middleware(req: NextRequest) {
   const hostname = req.headers.get("host") || "";
-  const subdomain = hostname.split(".")[0];
+  let subdomain = hostname.split(".")[0];
 
-  if (subdomain === "blogs") {
-    return NextResponse.rewrite(
-      new URL(`/blogs${req.nextUrl.pathname}`, req.url)
-    );
+  if (!subdomain) {
+    subdomain = "default";
   }
 
-  if (subdomain === "app") {
-    return NextResponse.rewrite(
-      new URL(`/app${req.nextUrl.pathname}`, req.url)
-    );
-  }
+  const url = req.nextUrl.clone();
 
-  if (subdomain === "pg") {
-    return NextResponse.rewrite(new URL(`/pg${req.nextUrl.pathname}`, req.url));
-  }
+  url.searchParams.set("subdomain", subdomain);
 
-  return NextResponse.next();
+  return NextResponse.rewrite(url);
 }
 
 export const config = {
