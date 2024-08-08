@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
 
 const config: Config = {
   content: [
@@ -10,22 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ...colors,
+        white: "#ffffff",
+        "gray-800": "#2d3748",
+        "green-600": "#16a34a",
+        "green-500": "#22c55e",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        serif: ["Merriweather", "serif"],
-        mono: ["Menlo", "monospace"],
+        mono: ["ui-monospace", "SFMono-Regular"],
+        sans: ["ui-sans-serif", "system-ui"],
+        semibold: ["ui-semibold", "system-ui"],
       },
       borderRadius: {
-        lg: "1rem",
-        md: "0.75rem",
-        full: "9999px",
+        md: "0.375rem",
       },
       boxShadow: {
-        md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)",
-        lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-        xl: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+        md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
       },
     },
   },

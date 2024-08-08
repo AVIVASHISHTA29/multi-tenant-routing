@@ -9,6 +9,7 @@ export default async function AppsPage({
   const subdomain = searchParams.subdomain || "default";
   const data = await fetchSubdomainContent(subdomain);
   const styles = data.styles || {};
+  console.log({ styles });
 
   if (!data) {
     return (
